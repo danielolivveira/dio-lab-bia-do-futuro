@@ -22,6 +22,19 @@ Finn é um consultor direto, honesto e anti-alucinação, que orienta o usuário
 | LLM | Ollama (gpt-oss) — 100% local |
 | Base de Conhecimento | JSON e CSV da pasta `data/` |
 
+## 🏗️ Arquitetura
+
+```mermaid
+flowchart TD
+    A[Usuário] --> B["Streamlit (Interface Visual)"]
+    B --> C[LLM]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação Anti-Alucinação]
+    E --> F[Resposta ao Usuário]
+    F --> A
+```
+
 ## 📁 Estrutura
 
 ```
